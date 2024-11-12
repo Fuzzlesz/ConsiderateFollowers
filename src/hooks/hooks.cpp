@@ -5,7 +5,7 @@ namespace Hooks {
 	{
 		auto& trampoline = SKSE::GetTrampoline();
 
-		REL::Relocation<std::uintptr_t> playerGoldTarget{ REL::ID(25541), 0xE2 };
+		REL::Relocation<std::uintptr_t> playerGoldTarget{ REL::ID(25014), 0xE2 };
 		_createDialogueItem = trampoline.write_call<5>(playerGoldTarget.address(), &CreateDialogueItem);
 	}
 
